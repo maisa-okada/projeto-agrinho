@@ -1,1 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raízes do Amanhã</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                🌱 Raízes do Amanhã
+            </div>
+
+            <ul class="menu">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#lia">Lia</a></li>
+                <li><a href="#pilares">Pilares</a></li>
+                <li><a href="#calculadora">Calculadora</a></li>
+                <li><a href="#futuro">Futuro</a></li>
+            </ul>
+
+        </nav>
+
+        <section class="hero">
+
+            <div class="hero-text">
+
+                <span class="tag">
+                    Tecnologia • Sustentabilidade • Futuro
+                </span>
+
+                <h1>
+                    Raízes do Amanhã
+                </h1>
+
+                <h2>
+                    Quando tecnologia e natureza crescem juntas,
+                    o futuro floresce.
+                </h2>
+
+                <p>
+                    Conheça a jornada da Lia e descubra como inovação,
+                    produção agrícola e preservação ambiental podem transformar o mundo.
+                </p>
+
+                <a href="#sobre" class="btn">
+                    Explorar Projeto
+                </a>
+
+            </div>
+
+            <div class="hero-image">
+
+                <img src="assets/lia.png" alt="Lia">
+
+            </div>
+
+        </section>
+
+    </header>
+
+    <main>
+
+        <section id="sobre" class="section">
+
+            <div class="titulo">
+                <h2>🌎 Nossa Missão</h2>
+            </div>
+
+            <p class="texto-central">
+                O futuro depende das escolhas que fazemos hoje.
+                Produzir alimentos, preservar recursos naturais e utilizar tecnologia
+                de forma inteligente são caminhos para um planeta mais equilibrado.
+            </p>
+
+        </section>
+
+        <section id="lia" class="section">
+
+            <div class="titulo">
+                <h2>👩‍🌾 Conheça a Lia</h2>
+            </div>
+
+            <div class="lia-box">
+
+                <img src="assets/lia.png" alt="Lia">
+
+                <div>
+
+                    <p>
+                        Lia é uma jovem apaixonada pela natureza e pela tecnologia.
+                        Ela acredita que o conhecimento pode transformar o campo e ajudar
+                        a construir um futuro sustentável.
+                    </p>
+
+                    <p>
+                        Utilizando drones, sensores e monitoramento inteligente,
+                        Lia acompanha plantações e incentiva práticas agrícolas
+                        responsáveis.
+                    </p>
+
+                    <button onclick="mostrarDica()">
+                        💡 Receber Dica da Lia
+                    </button>
+
+                    <div id="dica-box">
+                        Clique para receber uma dica sustentável.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="pilares" class="section">
+
+            <div class="titulo">
+                <h2>🌱 Os Pilares do Amanhã</h2>
+            </div>
+
+            <div class="cards">
+
+                <div class="card">
+                    <div class="icone">💧</div>
+                    <h3>Água</h3>
+                    <p>Uso consciente dos recursos hídricos.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icone">🌿</div>
+                    <h3>Solo</h3>
+                    <p>Preservação e fertilidade para futuras gerações.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icone">🤖</div>
+                    <h3>Tecnologia</h3>
+                    <p>Drones, sensores e agricultura inteligente.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icone">🌎</div>
+                    <h3>Sustentabilidade</h3>
+                    <p>Produzir mais preservando o meio ambiente.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="calculadora" class="section calculadora">
+
+            <div class="titulo">
+                <h2>🌿 Calculadora Verde da Lia</h2>
+            </div>
+
+            <p>
+                Descubra o consumo estimado de água utilizado na produção de alimentos.
+            </p>
+
+            <select id="alimento">
+
+                <option value="15000">1 kg de Carne Bovina</option>
+                <option value="2500">1 kg de Arroz</option>
+                <option value="1300">1 kg de Trigo</option>
+                <option value="200">1 Maçã</option>
+
+            </select>
+
+            <input
+                type="number"
+                id="quantidade"
+                min="1"
+                value="1">
+
+            <button onclick="calcularAgua()">
+                Calcular
+            </button>
+
+            <div id="resultado"></div>
+
+        </section>
+
+        <section id="futuro" class="section">
+
+            <div class="titulo">
+                <h2>🚀 O Futuro que Estamos Cultivando</h2>
+            </div>
+
+            <div class="timeline">
+
+                <div class="etapa">
+                    <span>🌱</span>
+                    <h3>Hoje</h3>
+                    <p>Produção consciente.</p>
+                </div>
+
+                <div class="etapa">
+                    <span>🤖</span>
+                    <h3>Inovação</h3>
+                    <p>Tecnologia a favor da natureza.</p>
+                </div>
+
+                <div class="etapa">
+                    <span>🌎</span>
+                    <h3>Amanhã</h3>
+                    <p>Um planeta mais sustentável.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <h3>🌱 Raízes do Amanhã</h3>
+
+        <p>
+            "As raízes que plantamos hoje serão o futuro que colheremos amanhã."
+        </p>
+
+        <p>
+            Concurso Agrinho 2026
+        </p>
+
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

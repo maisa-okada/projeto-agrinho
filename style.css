@@ -1,3 +1,4 @@
+/* --- CONFIGURAÇÕES GERAIS --- */
 * { 
     margin: 0; 
     padding: 0; 
@@ -23,6 +24,7 @@ body {
     background: linear-gradient(180deg, #bbdefb 0%, #e3f2fd 100%); /* Fundo azul suave */
     overflow-x: hidden; 
     position: relative;
+    min-height: 100vh;
 }
 
 /* --- ANIMAÇÃO DE FOLHAS E FLORES CAINDO --- */
@@ -62,7 +64,7 @@ body {
     }
 }
 
-/* NAVBAR */
+/* --- NAVBAR --- */
 .navbar { 
     position: fixed; 
     top: 0; 
@@ -100,7 +102,7 @@ body {
     color: var(--verde); 
 }
 
-/* HERO (SEÇÃO PRINCIPAL) */
+/* --- HERO (SEÇÃO PRINCIPAL) --- */
 .hero { 
     min-height: 100vh; 
     display: flex; 
@@ -168,14 +170,10 @@ body {
     position: relative;
 }
 
-.hero-image-lia, .hero-image-arvore { 
+.hero-image-lia { 
     max-width: 240px; 
     height: auto;
     animation: flutuar 4s ease-in-out infinite; 
-}
-
-.hero-image-arvore {
-    animation-delay: 0.5s; /* Desencontro leve na animação */
 }
 
 @keyframes flutuar { 
@@ -184,7 +182,7 @@ body {
     100% { transform: translateY(0); } 
 }
 
-/* SEÇÕES GERAIS */
+/* --- SEÇÕES GERAIS --- */
 .section { 
     padding: 100px 10%; 
 }
@@ -207,7 +205,7 @@ body {
     font-size: 1.2rem; 
 }
 
-/* SEÇÃO DA LIA */
+/* --- SEÇÃO DA LIA --- */
 .lia-box { 
     display: flex; 
     align-items: center; 
@@ -253,7 +251,7 @@ button:hover {
     box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
 }
 
-/* CARDS */
+/* --- CARDS --- */
 .cards { 
     display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
@@ -284,7 +282,7 @@ button:hover {
     margin-bottom: 10px; 
 }
 
-/* CALCULADORA */
+/* --- CALCULADORA --- */
 .calculadora { 
     text-align: center; 
     background: rgba(255, 255, 255, 0.7); 
@@ -310,7 +308,7 @@ select, input {
     color: #1b5e20; 
 }
 
-/* TIMELINE */
+/* --- TIMELINE --- */
 .timeline { 
     display: flex; 
     justify-content: center; 
@@ -336,7 +334,7 @@ select, input {
     color: #1565c0; 
 }
 
-/* FOOTER */
+/* --- FOOTER --- */
 footer { 
     background: #0d47a1; 
     color: white; 
@@ -353,12 +351,12 @@ footer p {
     opacity: 0.9;
 }
 
-/* RESPONSIVO */
+/* --- RESPONSIVO --- */
 @media(max-width: 900px){
     .hero { flex-direction: column-reverse; text-align: center; }
     .hero h1 { font-size: 2.8rem; }
     .hero-images-container { justify-content: center; }
-    .hero-image-lia, .hero-image-arvore { max-width: 160px; }
+    .hero-image-lia { max-width: 160px; }
     .lia-box { flex-direction: column; text-align: center; }
 }
 
@@ -366,4 +364,3 @@ footer p {
     .navbar { flex-direction: column; gap: 15px; }
     .menu { flex-wrap: wrap; justify-content: center; gap: 15px; }
 }
-

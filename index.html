@@ -1,245 +1,147 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raízes do Amanhã</title>
-
+    <title>Raízes do Amanhã - Agrinho 2026</title>
+    <!-- Importando a fonte do Google que você definiu no CSS -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-    <header>
+    <!-- Container onde o JavaScript vai injetar as flores e folhas caindo -->
+    <div class="efeito-natureza" id="containerNatureza"></div>
 
-        <nav class="navbar">
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">🌱 Raízes do Amanhã</div>
+        <ul class="menu">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#objetivos">Objetivos</a></li>
+            <li><a href="#calculadora">Calculadora</a></li>
+        </ul>
+    </nav>
 
-            <div class="logo">
-                🌱 Raízes do Amanhã
+    <!-- HERO (SEÇÃO PRINCIPAL) -->
+    <section class="hero" id="inicio">
+        <div class="hero-text">
+            <span class="tag">Concurso Agrinho 2026</span>
+            <h1>Raízes do Amanhã</h1>
+            <h2>Equilíbrio entre a produção e o meio ambiente</h2>
+            <p>Descubra como a união entre a tecnologia, a agricultura moderna e a sustentabilidade pode preservar os nossos recursos naturais e garantir um futuro próspero.</p>
+            <a href="#sobre" class="btn">Explorar Projeto</a>
+        </div>
+        
+        <!-- Imagens Lado a Lado (Ajustado o caminho para a pasta assets) -->
+        <div class="hero-images-container">
+            <!-- Caso queira adicionar uma árvore decorativa futuramente, a tag já está pronta -->
+            <img src="assets/lia.png" alt="Mascote Lia" class="hero-image-lia">
+        </div>
+    </section>
+
+    <!-- SEÇÃO SOBRE E MASCOTE LIA -->
+    <section class="section" id="sobre">
+        <div class="titulo">
+            <h2>Conheça a Lia e o Projeto</h2>
+        </div>
+        
+        <div class="lia-box">
+            <!-- Imagem da Lia apontando para a sua estrutura -->
+            <img src="assets/lia.png" alt="Mascote Lia apresentando">
+            <div>
+                <p><strong>Olá! Eu sou a Lia! 👩‍🌾</strong></p>
+                <p>Sou uma jovem apaixonada pela natureza e pela inovação no campo. No projeto <strong>Raízes do Amanhã</strong>, vou te mostrar como as novas tecnologias ajudam a preservar os ecossistemas enquanto produzimos alimentos de qualidade!</p>
+                
+                <!-- Botão integrado com sua função original -->
+                <button onclick="mostrarDica()">Receber Dica Sustentável da Lia</button>
+                <div id="dica-box">Clique no botão acima para ver uma dica importante sobre o nosso futuro!</div>
             </div>
+        </div>
+    </section>
 
-            <ul class="menu">
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#lia">Lia</a></li>
-                <li><a href="#pilares">Pilares</a></li>
-                <li><a href="#calculadora">Calculadora</a></li>
-                <li><a href="#futuro">Futuro</a></li>
-            </ul>
-
-        </nav>
-
-        <section class="hero">
-
-            <div class="hero-text">
-
-                <span class="tag">
-                    Tecnologia • Sustentabilidade • Futuro
-                </span>
-
-                <h1>
-                    Raízes do Amanhã
-                </h1>
-
-                <h2>
-                    Quando tecnologia e natureza crescem juntas,
-                    o futuro floresce.
-                </h2>
-
-                <p>
-                    Conheça a jornada da Lia e descubra como inovação,
-                    produção agrícola e preservação ambiental podem transformar o mundo.
-                </p>
-
-                <a href="#sobre" class="btn">
-                    Explorar Projeto
-                </a>
-
+    <!-- SEÇÃO OBJETIVOS (CARDS) -->
+    <section class="section" id="objetivos">
+        <div class="titulo">
+            <h2>Nossos Objetivos</h2>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <div class="icone">🌿</div>
+                <h3>Sustentabilidade</h3>
+                <p>Conscientizar sobre a preservação e o cuidado do meio ambiente.</p>
             </div>
-
-            <div class="hero-image">
-
-                <img src="assets/lia.png" alt="Lia">
-
+            <div class="card">
+                <div class="icone">🚜</div>
+                <h3>Modernização</h3>
+                <p>Demonstrar a importância e os avanços da agricultura moderna.</p>
             </div>
-
-        </section>
-
-    </header>
-
-    <main>
-
-        <section id="sobre" class="section">
-
-            <div class="titulo">
-                <h2>🌎 Nossa Missão</h2>
+            <div class="card">
+                <div class="icone">🤖</div>
+                <h3>Tecnologia</h3>
+                <p>Mostrar como ferramentas digitais otimizam os recursos no campo.</p>
             </div>
+        </div>
+    </section>
 
-            <p class="texto-central">
-                O futuro depende das escolhas que fazemos hoje.
-                Produzir alimentos, preservar recursos naturais e utilizar tecnologia
-                de forma inteligente são caminhos para um planeta mais equilibrado.
-            </p>
+    <!-- SEÇÃO CALCULADORA INTERATIVA -->
+    <section class="section calculadora" id="calculadora">
+        <div class="titulo">
+            <h2>Calculadora Verde Hídrica 💧</h2>
+            <p>Selecione um alimento e descubra o impacto do consumo de água</p>
+        </div>
 
-        </section>
+        <!-- Seletor integrado com os valores multiplicadores para a sua função calcularAgua() -->
+        <select id="alimento">
+            <option value="15000">Carne Bovina (15.000L por kg)</option>
+            <option value="3400">Arroz (3.400L por kg)</option>
+            <option value="1300">Trigo (1.300L por kg)</option>
+            <option value="900">Milho (900L por kg)</option>
+            <option value="250">Batata (250L por kg)</option>
+        </select>
 
-        <section id="lia" class="section">
+        <input type="number" id="quantidade" placeholder="Digite a quantidade em kg (Ex: 2)" min="1">
+        
+        <button onclick="calcularAgua()">Calcular Pegada Hídrica</button>
 
-            <div class="titulo">
-                <h2>👩‍🌾 Conheça a Lia</h2>
+        <div id="resultado"></div>
+    </section>
+
+    <!-- LINHA DO TEMPO / ETAPAS -->
+    <section class="section">
+        <div class="titulo">
+            <h2>O Caminho para o Amanhã</h2>
+        </div>
+        <div class="timeline">
+            <div class="etapa">
+                <span>1️⃣</span>
+                <h3>Conscientizar</h3>
+                <p>Entender que os recursos naturais são finitos.</p>
             </div>
-
-            <div class="lia-box">
-
-                <img src="assets/lia.png" alt="Lia">
-
-                <div>
-
-                    <p>
-                        Lia é uma jovem apaixonada pela natureza e pela tecnologia.
-                        Ela acredita que o conhecimento pode transformar o campo e ajudar
-                        a construir um futuro sustentável.
-                    </p>
-
-                    <p>
-                        Utilizando drones, sensores e monitoramento inteligente,
-                        Lia acompanha plantações e incentiva práticas agrícolas
-                        responsáveis.
-                    </p>
-
-                    <button onclick="mostrarDica()">
-                        💡 Receber Dica da Lia
-                    </button>
-
-                    <div id="dica-box">
-                        Clique para receber uma dica sustentável.
-                    </div>
-
-                </div>
-
+            <div class="etapa">
+                <span>2️⃣</span>
+                <h3>Inovar</h3>
+                <p>Aplicar drones e IA para evitar desperdícios.</p>
             </div>
-
-        </section>
-
-        <section id="pilares" class="section">
-
-            <div class="titulo">
-                <h2>🌱 Os Pilares do Amanhã</h2>
+            <div class="etapa">
+                <span>3️⃣</span>
+                <h3>Colher</h3>
+                <p>Garantir um futuro equilibrado e produtivo.</p>
             </div>
+        </div>
+    </section>
 
-            <div class="cards">
-
-                <div class="card">
-                    <div class="icone">💧</div>
-                    <h3>Água</h3>
-                    <p>Uso consciente dos recursos hídricos.</p>
-                </div>
-
-                <div class="card">
-                    <div class="icone">🌿</div>
-                    <h3>Solo</h3>
-                    <p>Preservação e fertilidade para futuras gerações.</p>
-                </div>
-
-                <div class="card">
-                    <div class="icone">🤖</div>
-                    <h3>Tecnologia</h3>
-                    <p>Drones, sensores e agricultura inteligente.</p>
-                </div>
-
-                <div class="card">
-                    <div class="icone">🌎</div>
-                    <h3>Sustentabilidade</h3>
-                    <p>Produzir mais preservando o meio ambiente.</p>
-                </div>
-
-            </div>
-
-        </section>
-
-        <section id="calculadora" class="section calculadora">
-
-            <div class="titulo">
-                <h2>🌿 Calculadora Verde da Lia</h2>
-            </div>
-
-            <p>
-                Descubra o consumo estimado de água utilizado na produção de alimentos.
-            </p>
-
-            <select id="alimento">
-
-                <option value="15000">1 kg de Carne Bovina</option>
-                <option value="2500">1 kg de Arroz</option>
-                <option value="1300">1 kg de Trigo</option>
-                <option value="200">1 Maçã</option>
-
-            </select>
-
-            <input
-                type="number"
-                id="quantidade"
-                min="1"
-                value="1">
-
-            <button onclick="calcularAgua()">
-                Calcular
-            </button>
-
-            <div id="resultado"></div>
-
-        </section>
-
-        <section id="futuro" class="section">
-
-            <div class="titulo">
-                <h2>🚀 O Futuro que Estamos Cultivando</h2>
-            </div>
-
-            <div class="timeline">
-
-                <div class="etapa">
-                    <span>🌱</span>
-                    <h3>Hoje</h3>
-                    <p>Produção consciente.</p>
-                </div>
-
-                <div class="etapa">
-                    <span>🤖</span>
-                    <h3>Inovação</h3>
-                    <p>Tecnologia a favor da natureza.</p>
-                </div>
-
-                <div class="etapa">
-                    <span>🌎</span>
-                    <h3>Amanhã</h3>
-                    <p>Um planeta mais sustentável.</p>
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
+    <!-- FOOTER -->
     <footer>
-
         <h3>🌱 Raízes do Amanhã</h3>
-
-        <p>
-            "As raízes que plantamos hoje serão o futuro que colheremos amanhã."
-        </p>
-
-        <p>
-            Concurso Agrinho 2026
-        </p>
-
+        <p>"As raízes que plantamos hoje serão o futuro que colheremos amanhã."</p>
+        <p><strong>Desenvolvido para o Concurso Agrinho 2026</strong></p>
+        <p style="font-size: 0.8rem; margin-top: 15px;">HTML5 | CSS3 | JavaScript</p>
     </footer>
 
     <script src="js/script.js"></script>
-
 </body>
 </html>

@@ -21,7 +21,9 @@ function ativarEfeitoNatureza() {
         // Sorteia velocidades de queda ligeiramente diferentes (entre 5 e 9 segundos)
         elemento.style.animationDuration = Math.random() * (9 - 5) + 5 + 's';
         
-        container.appendChild(elemento);
+        if (container) {
+            container.appendChild(elemento);
+        }
 
         // Remove o elemento após o fim da animação para economizar memória do site
         setTimeout(() => {
@@ -47,12 +49,21 @@ const dicas = [
 
 function mostrarDica(){
     const indice = Math.floor(Math.random() * dicas.length);
-    document.getElementById("dica-box").innerHTML = dicas[indice];
+    const dicaBox = document.getElementById("dica-box");
+    if (dicaBox) {
+        dicaBox.innerHTML = dicas[indice];
+    }
 }
 
 function calcularAgua(){
-    const alimento = parseFloat(document.getElementById("alimento").value);
-    const quantidade = parseFloat(document.getElementById("quantidade").value);
+    const alimentoInput = document.getElementById("alimento");
+    const quantidadeInput = document.getElementById("quantidade");
+    const resultadoBox = document.getElementById("resultado");
+
+    if (!alimentoInput || !quantidadeInput || !resultadoBox) return;
+
+    const alimento = parseFloat(alimentoInput.value);
+    const quantidade = parseFloat(quantidadeInput.value);
 
     if(isNaN(quantidade) || quantidade <= 0){
         alert("Digite uma quantidade válida.");
@@ -61,8 +72,9 @@ function calcularAgua(){
 
     const total = alimento * quantidade;
 
-    document.getElementById("resultado").innerHTML =
+    resultadoBox.innerHTML =
         "💧 Consumo estimado: <br><br><strong>" +
         total.toLocaleString("pt-BR") +
         " litros de água</strong>";
 }
+
